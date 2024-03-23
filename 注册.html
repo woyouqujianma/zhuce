@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>注册</title>
+
+    <style>
+
+        *{
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+        body{
+
+            position: relative;
+
+            height: 100vh;
+
+            background-image: url(https://1-yanshouyi-1325233165.cos.ap-nanjing.myqcloud.com/%E7%BD%91%E7%AB%99/image/%E7%A0%94%E5%AE%88%E8%89%BA%20%282%29.jpg);
+
+            background-repeat: no-repeat;
+
+            background-size: cover;
+
+        }
+
+        .main{
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform: translate(-50%,-50%);
+
+            width: 400px;
+
+            height: 400px;
+
+            color: rgba(255, 255, 255, 0.8);
+
+            backdrop-filter: blur(10px);
+
+            overflow: hidden;
+
+            border-radius: 20px;
+
+
+
+        }
+
+
+
+       .first,.sec{
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        height: 300px;
+
+        width: 100%;
+
+       }
+
+       .first{
+
+        margin-top: 40px;
+
+       }
+
+       p{
+
+        font-size: 40px;
+
+        transition: 1s ease-in;
+
+        font-family: "微软雅黑";
+
+        background-image:url("./img/04.jpg");
+
+        background-size: 100% 100%;
+
+           background-clip:text;
+
+           -webkit-text-stroke:1px #0000FF;
+
+           -webkit-text-fill-color:transparent;
+
+
+
+
+       }
+
+       .p2{
+
+        transform: scale(.6);
+
+        transition: 1s ease-in;
+
+       }
+
+       input{
+
+        margin-top: 40px;
+
+        background: linear-gradient(to bottom,rgb(227, 213, 255),rgb(255, 231, 231));
+
+        padding: 10px;
+
+        border: none;
+
+        outline: none;
+
+        border-radius: 10px;
+
+        height: 40px;
+
+       }
+
+       input:focus{
+
+  box-shadow: 0 0 10px 1px #ee8c8c;
+
+  transition: all .3s;
+
+       }
+
+       .sec{
+
+        height: 400px;
+
+        z-index: 100;
+
+        transition: 1s ease-in;
+
+        border-radius: 60%/10%;
+
+        border-top: 2px black solid;
+
+        background-image: url(./img/04.jpg);
+
+            background-repeat: no-repeat;
+
+            background-size: cover;
+
+       }
+
+       .sec:hover{
+
+          transform: translateY(-250px);
+
+       }
+
+       .sec:hover .p2{
+
+        transform: scale(1);
+
+       }
+
+       .sec:hover .p1{
+
+        transform: scale(.6);
+
+       }
+
+        .main:hover {
+
+            box-shadow: 0 0 10px 1px #ee8c8c;
+
+    }
+
+    button {
+
+        width: 6em;
+
+        height: 20px;
+
+        border-radius: 10px;
+
+        position: relative;
+
+        height: 3.5em;
+
+        border: 3px ridge #149CEA;
+
+        outline: none;
+
+        background-color: transparent;
+
+        color: white;
+
+        transition: 1s;
+
+        font-size: 16px;
+
+        font-weight: bold;
+
+        cursor: pointer;
+
+        margin-top: 10px;
+
+    }
+
+
+
+button::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: -10px;
+
+  left: 3%;
+
+  width: 95%;
+
+  height: 40%;
+
+  background-color: transparent;
+
+  transition: 0.5s;
+
+  transform-origin: center;
+
+}
+
+
+
+button::before {
+
+    content: "";
+
+    transform-origin: center;
+
+    position: absolute;
+
+    top: 80%;
+
+    left: 3%;
+
+    width: 95%;
+
+    height: 40%;
+
+    background-color:  transparent;
+
+    transition: 0.5s;
+
+}
+
+
+
+button:hover::before, button:hover::after {
+
+    transform: scale(0)
+
+}
+
+
+
+button:hover {
+
+    box-shadow: inset 0px 0px 25px #1479EA;
+
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main">
+
+    <form class="first">
+
+        <p class="p1">Login in</p >
+
+        <input placeholder="请输入账号" required>
+
+        <input placeholder="请输入密码" required>
+
+        <button>注册</button>
+
+   
+
+    </div>
+
+</body>
+
+</html>
